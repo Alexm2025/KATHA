@@ -1,7 +1,7 @@
 // Dependency-light building blocks. The landing page imports only these, so it does not
 // pull the database layer into the first download.
 import type { ButtonHTMLAttributes, ReactNode } from 'react'
-import { usePrefs } from '@/lib/store'
+import { BASE, usePrefs } from '@/lib/store'
 
 const cx = (...c: (string | false | undefined | null)[]) => c.filter(Boolean).join(' ')
 export { cx }
@@ -58,7 +58,7 @@ export function Chip({ tone = 'neutral', children }: { tone?: keyof typeof CHIP;
 export function Logo({ small }: { small?: boolean }) {
   return (
     <span className="inline-flex items-center gap-2 font-bold text-terra-dark">
-      <img src="/favicon.svg" alt="" className={small ? 'size-7' : 'size-9'} />
+      <img src={`${BASE}/favicon.svg`} alt="" className={small ? 'size-7' : 'size-9'} />
       <span className={small ? 'text-lg' : 'text-2xl'}>KATHA</span>
     </span>
   )

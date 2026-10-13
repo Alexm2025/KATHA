@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useState, type ReactNode } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import { useSessions } from './lib/store'
+import { BASE, useSessions } from './lib/store'
 import type { Role } from './lib/types'
 import Landing from './pages/Landing'
 
@@ -45,7 +45,7 @@ export default function App() {
     }
   }, [])
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={BASE || "/"}>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Ready><Login /></Ready>} />

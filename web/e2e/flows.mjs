@@ -164,7 +164,7 @@ export async function run({ ctx, teacher, student, check, watch, BASE }) {
   const fresh = await ctx.browser().newContext({ viewport: { width: 1280, height: 800 } })
   const demo = await fresh.newPage()
   watch(demo, 'demo')
-  await demo.goto(BASE)
+  await demo.goto(`${BASE}/`)
   await demo.getByRole('link', { name: /डेमो देखें/ }).click()
   await demo.frameLocator('iframe[title="teacher"]').getByText('सुनीता मैम').waitFor({ timeout: 15000 })
   await demo.frameLocator('iframe[title="student"]').getByText('बिरसा').waitFor({ timeout: 15000 })
@@ -173,14 +173,14 @@ export async function run({ ctx, teacher, student, check, watch, BASE }) {
   await demo.frameLocator('iframe[title="student"]').getByText('ᱢᱤᱫ').waitFor({ timeout: 8000 })
   check('demo: no login, split screen, teacher → student works', true)
   await shot(demo, 'demo-split.png')
-  await demo.goto(BASE)
+  await demo.goto(`${BASE}/`)
   await shot(demo, 'landing.png')
 
   // --- Installable PWA: manifest, icons and a controlling service worker -----------------------
   const pwa = await demo.evaluate(async () => {
     const href = document.querySelector('link[rel=manifest]')?.getAttribute('href')
     const manifest = href ? await (await fetch(href)).json() : null
-    const icons = manifest ? await Promise.all(manifest.icons.map(async (i) => (await fetch('/' + i.src)).ok)) : []
+    const icons = manifest ? await Promise.all(manifest.icons.map(async (i) => (await fetch(new URL(i.src, new URL(href, location.href)))).ok)) : []
     await navigator.serviceWorker.ready
     return { name: manifest?.name, display: manifest?.display, sizes: manifest?.icons.map((i) => i.sizes), icons, sw: !!(await navigator.serviceWorker.getRegistration())?.active }
   })

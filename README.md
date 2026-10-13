@@ -7,6 +7,8 @@ A teacher speaks or taps Hindi; KATHA shows it to Class 1–3 children as Ho, Mu
 text and audio, takes their doubts back to the teacher, and generates bilingual worksheets,
 flashcards and quizzes. It is an installable PWA that keeps working with no network.
 
+**Live demo:** https://alexm2025.github.io/KATHA/ (press **डेमो देखें / Try the Demo**; best in Chrome)
+
 ## Run it
 
 Needs Node 20+ (and Python 3.11+ only if you want the optional server).
@@ -114,6 +116,7 @@ To change the shipped seed instead, edit `content/lessons.json` and raise its `v
 
 Static hosting works; the app is a single-page app, so unknown paths must serve `index.html`.
 
+- **GitHub Pages:** every push to `main` builds and deploys through `.github/workflows/pages.yml`. The build sets `BASE_PATH=/<repository>/`.
 - **Vercel:** root directory `web`, framework Vite. `web/vercel.json` has the rewrite.
 - **Netlify:** base directory `web`. `web/netlify.toml` has the build settings and the redirect.
 

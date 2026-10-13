@@ -1,6 +1,7 @@
 import content from '@content/lessons.json'
 import { encryptJson, makePin, newDataKey } from './crypto'
 import { db, setMeta } from './db'
+import { BASE } from './store'
 import { normHi, TRIBAL_LANGS } from './lang'
 import type { Attempt, ClassRoom, Evaluation, GlossaryEntry, Lesson, StudentRecord, User } from './types'
 
@@ -147,5 +148,5 @@ export async function resetAll() {
   await db.delete()
   localStorage.removeItem('katha.mockServer')
   sessionStorage.removeItem('katha.sessions')
-  location.assign('/')
+  location.assign(`${BASE}/`)
 }

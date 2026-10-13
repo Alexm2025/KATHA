@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Btn, Chip, LangToggle, Logo } from '@/components/ui'
 import { setMeta } from '@/lib/db'
-import { usePrefs, useSessions, useT } from '@/lib/store'
+import { BASE, usePrefs, useSessions, useT } from '@/lib/store'
 
 const DEMO = { classId: 'c1', lessonId: 'l-numbers', teacherId: 't1', studentId: 's1' }
 
@@ -108,9 +108,9 @@ export default function Demo() {
         <p className="mt-1 text-ink" aria-live="polite">👉 {t(step.doHi, step.doEn)}</p>
         <p className="mt-1 text-sm text-ink-soft">
           {t('दो असली टैब में आज़माएँ', 'Try it in two real tabs')}:{' '}
-          <a className="font-bold text-terra-dark underline" href="/teacher/live" target="_blank" rel="noreferrer">{t('शिक्षक टैब', 'teacher tab')}</a>
+          <a className="font-bold text-terra-dark underline" href={`${BASE}/teacher/live`} target="_blank" rel="noreferrer">{t('शिक्षक टैब', 'teacher tab')}</a>
           {' · '}
-          <a className="font-bold text-terra-dark underline" href="/student/listen" target="_blank" rel="noreferrer">{t('विद्यार्थी टैब', 'student tab')}</a>
+          <a className="font-bold text-terra-dark underline" href={`${BASE}/student/listen`} target="_blank" rel="noreferrer">{t('विद्यार्थी टैब', 'student tab')}</a>
         </p>
       </header>
       <div className="grid min-h-0 flex-1 grid-rows-2 gap-1 bg-cream-deep landscape:grid-cols-2 landscape:grid-rows-1">
@@ -122,7 +122,7 @@ export default function Demo() {
             <iframe
               // A new key per step reloads the frame on the right screen for that step.
               key={`${who}-${step[who]}`}
-              src={step[who]}
+              src={BASE + step[who]}
               title={who}
               allow="microphone"
               className="min-h-0 w-full flex-1 border-0"

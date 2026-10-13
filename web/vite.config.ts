@@ -4,7 +4,11 @@ import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
+// Set BASE_PATH (e.g. /KATHA/) when the site is served from a sub-path such as GitHub Pages.
+const base = process.env.BASE_PATH ?? '/'
+
 export default defineConfig({
+  base,
   plugins: [
     react(),
     tailwindcss(),
@@ -21,7 +25,8 @@ export default defineConfig({
         background_color: '#FBF3E4',
         display: 'standalone',
         orientation: 'any',
-        start_url: '/',
+        start_url: base,
+        scope: base,
         icons: [
           { src: 'icon-192.png', sizes: '192x192', type: 'image/png' },
           { src: 'icon-512.png', sizes: '512x512', type: 'image/png' },
@@ -31,7 +36,7 @@ export default defineConfig({
       workbox: {
         // Everything the classroom needs is precached: shell, role apps, fonts, lesson content.
         globPatterns: ['**/*.{js,css,html,svg,png,webp,woff2,json}'],
-        navigateFallback: '/index.html',
+        navigateFallback: `${base}index.html`,
         cleanupOutdatedCaches: true,
       },
     }),

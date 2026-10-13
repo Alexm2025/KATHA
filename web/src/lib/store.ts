@@ -3,6 +3,9 @@ import { create } from 'zustand'
 import { createJSONStorage, persist } from 'zustand/middleware'
 import type { Role, Subject } from './types'
 
+/** Path the app is served under, without a trailing slash ('' at the domain root). */
+export const BASE = import.meta.env.BASE_URL.replace(/\/$/, '')
+
 interface Prefs {
   uiLang: 'hi' | 'en'
   /** Show the alternate script (Latin for Santali, Devanagari for Ho). */
