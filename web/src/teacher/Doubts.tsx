@@ -1,11 +1,11 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { useRef, useState } from 'react'
 import { Btn, Card, Chip, Empty, inputCls, TribalText } from '@/components/ui'
-import { db } from '@/lib/db'
+import { db, save } from '@/lib/db'
 import { DOUBT_CARDS, replyToDoubt } from '@/lib/doubts'
 import { useTeach } from '@/lib/hooks'
 import { LANGS } from '@/lib/lang'
-import { liveAsr } from '@/lib/providers'
+import { API_URL, clipAsr, liveAsr } from '@/lib/providers'
 import { playBlob } from '@/lib/providers/tts'
 import { useOnline, usePrefs, useT } from '@/lib/store'
 import type { Doubt, User } from '@/lib/types'
@@ -18,6 +18,7 @@ function DoubtCard({ d, student }: { d: Doubt; student?: User }) {
   const onlineAsr = usePrefs((s) => s.onlineAsr)
   const [reply, setReply] = useState('')
   const [dictating, setDictating] = useState(false)
+  const [asr, setAsr] = useState<'idle' | 'busy' | 'none'>('idle')
   const handle = useRef<{ stop: () => void } | null>(null)
   const card = DOUBT_CARDS.find((c) => c.id === d.cardId)
   const lang = LANGS[d.lang]
@@ -35,6 +36,18 @@ function DoubtCard({ d, student }: { d: Doubt; student?: User }) {
       error: () => {},
       end: () => setDictating(false),
     })
+  }
+
+  // Server ASR for the child's recording, once a model for the language is deployed.
+  async function transcribe() {
+    setAsr('busy')
+    try {
+      const tr = await clipAsr.transcribe(d.audio!, d.lang)
+      if (tr.text) await save('doubts', d.id, { ...d, hi: tr.text })
+      setAsr(tr.text ? 'idle' : 'none')
+    } catch {
+      setAsr('none')
+    }
   }
 
   return (
@@ -58,8 +71,14 @@ function DoubtCard({ d, student }: { d: Doubt; student?: User }) {
             <span aria-hidden>{card.icon}</span> <strong>{card.hi}</strong>
             <span className="ml-2 text-sm text-ink-soft">({t('सवाल-कार्ड से', 'from a doubt card')})</span>
           </p>
+        ) : d.hi ? (
+          <p className="text-xl"><strong>{d.hi}</strong> <Chip tone="warn">ASR</Chip></p>
         ) : (
           <p className="text-sm text-ink-soft">
+            {d.audio && API_URL && online && (
+              <Btn variant="outline" className="mb-2 mr-2" disabled={asr === 'busy'} onClick={transcribe}>🔤 {t('सर्वर से हिंदी में बदलें', 'Transcribe on the server')}</Btn>
+            )}
+            {asr === 'none' && <Chip tone="warn">{t('सर्वर पर अभी मॉडल नहीं है', 'No model on the server yet')}</Chip>}{' '}
             {t(
               `${lang.hi} की आवाज़ को हिंदी में बदलने वाला मॉडल अभी उपलब्ध नहीं है — रिकॉर्डिंग सुनें या किसी सहायक से पूछें।`,
               `Turning ${lang.en} speech into Hindi needs a speech model that is not available yet — listen to the recording or ask a helper.`,
