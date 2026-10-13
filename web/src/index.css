@@ -1,0 +1,85 @@
+@import 'tailwindcss';
+@import '@fontsource/noto-sans-devanagari/devanagari-400.css';
+@import '@fontsource/noto-sans-devanagari/devanagari-700.css';
+@import '@fontsource/noto-sans-devanagari/latin-400.css';
+@import '@fontsource/noto-sans-devanagari/latin-700.css';
+@import '@fontsource/noto-sans-ol-chiki/ol-chiki-400.css';
+@import '@fontsource/noto-sans-ol-chiki/ol-chiki-700.css';
+@import '@fontsource/noto-sans-warang-citi/warang-citi-400.css';
+
+@theme {
+  --font-sans: 'Noto Sans Devanagari', 'Noto Sans Ol Chiki', 'Noto Sans Warang Citi', system-ui,
+    sans-serif;
+  --color-cream: #fbf3e4;
+  --color-cream-deep: #f3e4c8;
+  --color-terra: #b84a22;
+  --color-terra-dark: #8f3515;
+  --color-terra-soft: #f6d9c9;
+  --color-leaf: #2f6b34;
+  --color-leaf-dark: #1f4d24;
+  --color-leaf-soft: #dcebd3;
+  --color-saffron: #e8851c;
+  --color-saffron-soft: #fde6c4;
+  --color-ink: #2b1d14;
+  --color-ink-soft: #6b5444;
+}
+
+html {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-saffron);
+  outline-offset: 2px;
+}
+
+/* Sohrai/Khovar-inspired border: decoration only. */
+.sohrai-band {
+  height: 14px;
+  background:
+    radial-gradient(circle at 7px 7px, var(--color-cream) 2.5px, transparent 3px) 0 0 / 28px 14px,
+    repeating-linear-gradient(
+      90deg,
+      var(--color-terra) 0 14px,
+      var(--color-leaf) 14px 28px
+    );
+}
+
+.sohrai-dots {
+  background-image:
+    radial-gradient(circle, rgb(184 74 34 / 0.12) 2px, transparent 2.5px),
+    radial-gradient(circle, rgb(47 107 52 / 0.1) 2px, transparent 2.5px);
+  background-size: 34px 34px;
+  background-position:
+    0 0,
+    17px 17px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  html,
+  body {
+    background: #fff;
+  }
+}
