@@ -175,6 +175,16 @@ export async function run({ ctx, teacher, student, check, watch, BASE }) {
   await shot(demo, 'demo-split.png')
   await demo.goto(BASE)
   await shot(demo, 'landing.png')
+
+  // --- Installable PWA: manifest, icons and a controlling service worker -----------------------
+  const pwa = await demo.evaluate(async () => {
+    const href = document.querySelector('link[rel=manifest]')?.getAttribute('href')
+    const manifest = href ? await (await fetch(href)).json() : null
+    const icons = manifest ? await Promise.all(manifest.icons.map(async (i) => (await fetch('/' + i.src)).ok)) : []
+    await navigator.serviceWorker.ready
+    return { name: manifest?.name, display: manifest?.display, sizes: manifest?.icons.map((i) => i.sizes), icons, sw: !!(await navigator.serviceWorker.getRegistration())?.active }
+  })
+  check('PWA: manifest, 192/512 icons and active service worker', pwa.display === 'standalone' && pwa.sizes.includes('192x192') && pwa.sizes.includes('512x512') && pwa.icons.every(Boolean) && pwa.sw, JSON.stringify(pwa.sizes))
   await fresh.close()
 }
 

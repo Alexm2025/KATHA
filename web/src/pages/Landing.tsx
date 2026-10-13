@@ -1,6 +1,6 @@
 import { Fragment, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { LangToggle, Logo } from '@/components/ui'
+import { LangToggle, Logo } from '@/components/base'
 import { useT } from '@/lib/store'
 
 const linkBtn =

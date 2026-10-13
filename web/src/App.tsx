@@ -1,8 +1,6 @@
 import { lazy, Suspense, useEffect, useState, type ReactNode } from 'react'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
-import { ensureSeed } from './lib/seed'
 import { useSessions } from './lib/store'
-import { startAutoSync } from './lib/sync'
 import type { Role } from './lib/types'
 import Landing from './pages/Landing'
 
@@ -23,7 +21,7 @@ const Loading = () => (
 function Ready({ children }: { children: ReactNode }) {
   const [ready, setReady] = useState(false)
   useEffect(() => {
-    void ensureSeed().then(() => setReady(true))
+    void import('./lib/seed').then((m) => m.ensureSeed()).then(() => setReady(true))
   }, [])
   return ready ? <Suspense fallback={<Loading />}>{children}</Suspense> : <Loading />
 }
@@ -34,7 +32,18 @@ function Guard({ role, children }: { role: Role; children: ReactNode }) {
 }
 
 export default function App() {
-  useEffect(() => startAutoSync(), [])
+  // The database and sync code load after first paint, off the landing page's critical path.
+  useEffect(() => {
+    let stop = () => {}
+    let cancelled = false
+    void import('./lib/sync').then((m) => {
+      if (!cancelled) stop = m.startAutoSync()
+    })
+    return () => {
+      cancelled = true
+      stop()
+    }
+  }, [])
   return (
     <BrowserRouter>
       <Routes>
