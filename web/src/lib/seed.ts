@@ -4,7 +4,7 @@ import { db, setMeta } from './db'
 import { normHi, TRIBAL_LANGS } from './lang'
 import type { Attempt, ClassRoom, Evaluation, GlossaryEntry, Lesson, StudentRecord, User } from './types'
 
-const SEED_LESSONS = content.lessons as unknown as Lesson[]
+const SEED_LESSONS = (content.lessons as unknown as Lesson[]).map((l, order) => ({ ...l, order }))
 
 // Demo credentials, shown on the login screen.
 export const DEMO_TEACHER_PIN = '1234'

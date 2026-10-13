@@ -1,7 +1,11 @@
 import { useLiveQuery } from 'dexie-react-hooks'
 import { db, getMeta } from './db'
 import { usePrefs, useSessions } from './store'
-import type { Role } from './types'
+import type { Lesson, Role } from './types'
+
+/** All lessons in teaching order. */
+export const allLessons = async (): Promise<Lesson[]> =>
+  (await db.lessons.toArray()).sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
 
 export function useMe(role: Role) {
   const session = useSessions((s) => s.sessions[role])
@@ -18,7 +22,7 @@ export function useTeach() {
     [user?.id],
   )
   const cls = classes?.find((c) => c.id === teach.classId) ?? classes?.[0]
-  const lessons = useLiveQuery(() => db.lessons.toArray())
+  const lessons = useLiveQuery(allLessons)
   const lesson = lessons?.find((l) => l.id === teach.lessonId)
   const students = useLiveQuery(
     () => (cls ? db.users.where('classId').equals(cls.id).toArray() : []),
@@ -32,7 +36,7 @@ export function useLearn() {
   const { user } = useMe('student')
   const cls = useLiveQuery(() => (user?.classId ? db.classes.get(user.classId) : undefined), [user?.classId])
   const lessons = useLiveQuery(
-    async () => (cls ? (await db.lessons.toArray()).filter((l) => l.grade === cls.grade) : []),
+    async () => (cls ? (await allLessons()).filter((l) => l.grade === cls.grade) : []),
     [cls?.grade],
   )
   const currentId = useLiveQuery(

@@ -35,6 +35,8 @@ export interface Lesson {
   titleHi: string
   titleEn: string
   items: LessonItem[]
+  /** Teaching order: the lesson after this one is the "next lesson". */
+  order?: number
   custom?: boolean
 }
 

@@ -62,6 +62,10 @@ function Form({ lang, hi, author, onClose, onSaved, initial }: Props & { initial
         </Field>
         <div className="flex flex-wrap items-center gap-2">
           <RecordBtn label={t('बोलकर रिकॉर्ड करें', 'Record how it is said')} onDone={(blob) => saveClip(lang, hi, blob, author)} />
+          <label className="inline-flex min-h-12 cursor-pointer items-center rounded-xl border-2 border-cream-deep px-3 font-bold hover:bg-cream-deep">
+            📁 {t('ऑडियो फ़ाइल', 'Audio file')}
+            <input type="file" accept="audio/*" className="sr-only" onChange={(e) => e.target.files?.[0] && saveClip(lang, hi, e.target.files[0], author)} />
+          </label>
           {clip ? (
             <Btn variant="soft" onClick={() => playBlob(clip.blob)}>🔊 {t('सुनें', 'Play')}</Btn>
           ) : (

@@ -18,23 +18,96 @@
           "en": "Johar (greeting)",
           "emoji": "🙏",
           "tr": {
-            "sat": { "native": "ᱡᱚᱦᱟᱨ", "alt": "Johar" },
-            "hoc": { "alt": "जोहार" },
-            "unr": { "native": "जोहार" }
+            "sat": {
+              "native": "ᱡᱚᱦᱟᱨ",
+              "alt": "Johar"
+            },
+            "hoc": {
+              "alt": "जोहार"
+            },
+            "unr": {
+              "native": "जोहार"
+            }
           }
         },
-        { "id": "greet-namaste", "kind": "word", "hi": "नमस्ते", "en": "Hello", "emoji": "👋" },
-        { "id": "greet-thanks", "kind": "word", "hi": "धन्यवाद", "en": "Thank you", "emoji": "🤝" },
-        { "id": "greet-yes", "kind": "word", "hi": "हाँ", "en": "Yes", "emoji": "✅" },
-        { "id": "greet-no", "kind": "word", "hi": "नहीं", "en": "No", "emoji": "❌" },
-        { "id": "greet-come", "kind": "word", "hi": "आओ", "en": "Come", "emoji": "🚶" },
-        { "id": "greet-sit", "kind": "word", "hi": "बैठो", "en": "Sit", "emoji": "🪑" },
-        { "id": "greet-s1", "kind": "sentence", "hi": "आपका नाम क्या है?", "en": "What is your name?" },
-        { "id": "greet-s2", "kind": "sentence", "hi": "आप कैसे हैं?", "en": "How are you?" },
-        { "id": "greet-s3", "kind": "sentence", "hi": "मैं ठीक हूँ।", "en": "I am fine." },
-        { "id": "greet-s4", "kind": "sentence", "hi": "ध्यान से सुनो।", "en": "Listen carefully." },
-        { "id": "greet-s5", "kind": "sentence", "hi": "मेरे साथ बोलो।", "en": "Say it with me." },
-        { "id": "greet-s6", "kind": "sentence", "hi": "फिर मिलेंगे।", "en": "See you again." }
+        {
+          "id": "greet-namaste",
+          "kind": "word",
+          "hi": "नमस्ते",
+          "en": "Hello",
+          "emoji": "👋"
+        },
+        {
+          "id": "greet-thanks",
+          "kind": "word",
+          "hi": "धन्यवाद",
+          "en": "Thank you",
+          "emoji": "🤝"
+        },
+        {
+          "id": "greet-yes",
+          "kind": "word",
+          "hi": "हाँ",
+          "en": "Yes",
+          "emoji": "✅"
+        },
+        {
+          "id": "greet-no",
+          "kind": "word",
+          "hi": "नहीं",
+          "en": "No",
+          "emoji": "❌"
+        },
+        {
+          "id": "greet-come",
+          "kind": "word",
+          "hi": "आओ",
+          "en": "Come",
+          "emoji": "🚶"
+        },
+        {
+          "id": "greet-sit",
+          "kind": "word",
+          "hi": "बैठो",
+          "en": "Sit",
+          "emoji": "🪑"
+        },
+        {
+          "id": "greet-s1",
+          "kind": "sentence",
+          "hi": "आपका नाम क्या है?",
+          "en": "What is your name?"
+        },
+        {
+          "id": "greet-s2",
+          "kind": "sentence",
+          "hi": "आप कैसे हैं?",
+          "en": "How are you?"
+        },
+        {
+          "id": "greet-s3",
+          "kind": "sentence",
+          "hi": "मैं ठीक हूँ।",
+          "en": "I am fine."
+        },
+        {
+          "id": "greet-s4",
+          "kind": "sentence",
+          "hi": "ध्यान से सुनो।",
+          "en": "Listen carefully."
+        },
+        {
+          "id": "greet-s5",
+          "kind": "sentence",
+          "hi": "मेरे साथ बोलो।",
+          "en": "Say it with me."
+        },
+        {
+          "id": "greet-s6",
+          "kind": "sentence",
+          "hi": "फिर मिलेंगे।",
+          "en": "See you again."
+        }
       ]
     },
     {
@@ -46,66 +119,92 @@
       "titleHi": "मेरा परिवार",
       "titleEn": "My Family",
       "items": [
-        { "id": "fam-mother", "kind": "word", "hi": "माँ", "en": "Mother", "emoji": "👩" },
-        { "id": "fam-father", "kind": "word", "hi": "पिता", "en": "Father", "emoji": "👨" },
-        { "id": "fam-brother", "kind": "word", "hi": "भाई", "en": "Brother", "emoji": "👦" },
-        { "id": "fam-sister", "kind": "word", "hi": "बहन", "en": "Sister", "emoji": "👧" },
-        { "id": "fam-grandma", "kind": "word", "hi": "दादी", "en": "Grandmother", "emoji": "👵" },
-        { "id": "fam-grandpa", "kind": "word", "hi": "दादा", "en": "Grandfather", "emoji": "👴" },
-        { "id": "fam-baby", "kind": "word", "hi": "बच्चा", "en": "Baby", "emoji": "👶" },
-        { "id": "fam-home", "kind": "word", "hi": "घर", "en": "Home", "emoji": "🏠" },
-        { "id": "fam-s1", "kind": "sentence", "hi": "यह मेरा परिवार है।", "en": "This is my family." },
-        { "id": "fam-s2", "kind": "sentence", "hi": "यह मेरी माँ है।", "en": "This is my mother." },
-        { "id": "fam-s3", "kind": "sentence", "hi": "यह मेरे पिता हैं।", "en": "This is my father." },
-        { "id": "fam-s4", "kind": "sentence", "hi": "आपके घर में कौन-कौन है?", "en": "Who lives in your home?" },
-        { "id": "fam-s5", "kind": "sentence", "hi": "हम साथ रहते हैं।", "en": "We live together." }
-      ]
-    },
-    {
-      "id": "l-body",
-      "grade": 1,
-      "subject": "paryavaran",
-      "outcome": "evs",
-      "emoji": "🧒",
-      "titleHi": "शरीर के अंग",
-      "titleEn": "Parts of the Body",
-      "items": [
-        { "id": "body-eye", "kind": "word", "hi": "आँख", "en": "Eye", "emoji": "👁️" },
-        { "id": "body-ear", "kind": "word", "hi": "कान", "en": "Ear", "emoji": "👂" },
-        { "id": "body-nose", "kind": "word", "hi": "नाक", "en": "Nose", "emoji": "👃" },
-        { "id": "body-mouth", "kind": "word", "hi": "मुँह", "en": "Mouth", "emoji": "👄" },
-        { "id": "body-hand", "kind": "word", "hi": "हाथ", "en": "Hand", "emoji": "✋" },
-        { "id": "body-foot", "kind": "word", "hi": "पैर", "en": "Foot", "emoji": "🦶" },
-        { "id": "body-tooth", "kind": "word", "hi": "दाँत", "en": "Tooth", "emoji": "🦷" },
-        { "id": "body-s1", "kind": "sentence", "hi": "यह मेरी आँख है।", "en": "This is my eye." },
-        { "id": "body-s2", "kind": "sentence", "hi": "हम आँखों से देखते हैं।", "en": "We see with our eyes." },
-        { "id": "body-s3", "kind": "sentence", "hi": "हम कानों से सुनते हैं।", "en": "We hear with our ears." },
-        { "id": "body-s4", "kind": "sentence", "hi": "अपने हाथ ऊपर करो।", "en": "Raise your hands." },
-        { "id": "body-s5", "kind": "sentence", "hi": "अपनी नाक छुओ।", "en": "Touch your nose." }
-      ]
-    },
-    {
-      "id": "l-nature",
-      "grade": 2,
-      "subject": "paryavaran",
-      "outcome": "evs",
-      "emoji": "🐄",
-      "titleHi": "फल और जानवर",
-      "titleEn": "Fruits and Animals",
-      "items": [
-        { "id": "nat-mango", "kind": "word", "hi": "आम", "en": "Mango", "emoji": "🥭" },
-        { "id": "nat-banana", "kind": "word", "hi": "केला", "en": "Banana", "emoji": "🍌" },
-        { "id": "nat-apple", "kind": "word", "hi": "सेब", "en": "Apple", "emoji": "🍎" },
-        { "id": "nat-cow", "kind": "word", "hi": "गाय", "en": "Cow", "emoji": "🐄" },
-        { "id": "nat-goat", "kind": "word", "hi": "बकरी", "en": "Goat", "emoji": "🐐" },
-        { "id": "nat-dog", "kind": "word", "hi": "कुत्ता", "en": "Dog", "emoji": "🐕" },
-        { "id": "nat-hen", "kind": "word", "hi": "मुर्गी", "en": "Hen", "emoji": "🐔" },
-        { "id": "nat-fish", "kind": "word", "hi": "मछली", "en": "Fish", "emoji": "🐟" },
-        { "id": "nat-s1", "kind": "sentence", "hi": "यह आम है।", "en": "This is a mango." },
-        { "id": "nat-s2", "kind": "sentence", "hi": "आम मीठा होता है।", "en": "Mango is sweet." },
-        { "id": "nat-s3", "kind": "sentence", "hi": "गाय दूध देती है।", "en": "The cow gives milk." },
-        { "id": "nat-s4", "kind": "sentence", "hi": "मछली पानी में रहती है।", "en": "Fish live in water." },
-        { "id": "nat-s5", "kind": "sentence", "hi": "आपको कौन सा फल पसंद है?", "en": "Which fruit do you like?" }
+        {
+          "id": "fam-mother",
+          "kind": "word",
+          "hi": "माँ",
+          "en": "Mother",
+          "emoji": "👩"
+        },
+        {
+          "id": "fam-father",
+          "kind": "word",
+          "hi": "पिता",
+          "en": "Father",
+          "emoji": "👨"
+        },
+        {
+          "id": "fam-brother",
+          "kind": "word",
+          "hi": "भाई",
+          "en": "Brother",
+          "emoji": "👦"
+        },
+        {
+          "id": "fam-sister",
+          "kind": "word",
+          "hi": "बहन",
+          "en": "Sister",
+          "emoji": "👧"
+        },
+        {
+          "id": "fam-grandma",
+          "kind": "word",
+          "hi": "दादी",
+          "en": "Grandmother",
+          "emoji": "👵"
+        },
+        {
+          "id": "fam-grandpa",
+          "kind": "word",
+          "hi": "दादा",
+          "en": "Grandfather",
+          "emoji": "👴"
+        },
+        {
+          "id": "fam-baby",
+          "kind": "word",
+          "hi": "बच्चा",
+          "en": "Baby",
+          "emoji": "👶"
+        },
+        {
+          "id": "fam-home",
+          "kind": "word",
+          "hi": "घर",
+          "en": "Home",
+          "emoji": "🏠"
+        },
+        {
+          "id": "fam-s1",
+          "kind": "sentence",
+          "hi": "यह मेरा परिवार है।",
+          "en": "This is my family."
+        },
+        {
+          "id": "fam-s2",
+          "kind": "sentence",
+          "hi": "यह मेरी माँ है।",
+          "en": "This is my mother."
+        },
+        {
+          "id": "fam-s3",
+          "kind": "sentence",
+          "hi": "यह मेरे पिता हैं।",
+          "en": "This is my father."
+        },
+        {
+          "id": "fam-s4",
+          "kind": "sentence",
+          "hi": "आपके घर में कौन-कौन है?",
+          "en": "Who lives in your home?"
+        },
+        {
+          "id": "fam-s5",
+          "kind": "sentence",
+          "hi": "हम साथ रहते हैं।",
+          "en": "We live together."
+        }
       ]
     },
     {
@@ -118,49 +217,406 @@
       "titleEn": "Numbers 1 to 10",
       "items": [
         {
-          "id": "num-1", "kind": "word", "hi": "एक", "en": "One", "digit": 1,
-          "tr": { "sat": { "native": "ᱢᱤᱫ", "alt": "mit'" }, "hoc": { "alt": "मियद्" }, "unr": { "native": "मियद्" } }
+          "id": "num-1",
+          "kind": "word",
+          "hi": "एक",
+          "en": "One",
+          "digit": 1,
+          "tr": {
+            "sat": {
+              "native": "ᱢᱤᱫ",
+              "alt": "mit'"
+            },
+            "hoc": {
+              "alt": "मियद्"
+            },
+            "unr": {
+              "native": "मियद्"
+            }
+          }
         },
         {
-          "id": "num-2", "kind": "word", "hi": "दो", "en": "Two", "digit": 2,
-          "tr": { "sat": { "native": "ᱵᱟᱨ", "alt": "bar" }, "hoc": { "alt": "बरिया" }, "unr": { "native": "बरिया" } }
+          "id": "num-2",
+          "kind": "word",
+          "hi": "दो",
+          "en": "Two",
+          "digit": 2,
+          "tr": {
+            "sat": {
+              "native": "ᱵᱟᱨ",
+              "alt": "bar"
+            },
+            "hoc": {
+              "alt": "बरिया"
+            },
+            "unr": {
+              "native": "बरिया"
+            }
+          }
         },
         {
-          "id": "num-3", "kind": "word", "hi": "तीन", "en": "Three", "digit": 3,
-          "tr": { "sat": { "native": "ᱯᱮ", "alt": "pe" }, "hoc": { "alt": "अपिया" }, "unr": { "native": "अपिया" } }
+          "id": "num-3",
+          "kind": "word",
+          "hi": "तीन",
+          "en": "Three",
+          "digit": 3,
+          "tr": {
+            "sat": {
+              "native": "ᱯᱮ",
+              "alt": "pe"
+            },
+            "hoc": {
+              "alt": "अपिया"
+            },
+            "unr": {
+              "native": "अपिया"
+            }
+          }
         },
         {
-          "id": "num-4", "kind": "word", "hi": "चार", "en": "Four", "digit": 4,
-          "tr": { "sat": { "native": "ᱯᱚᱱ", "alt": "pon" }, "hoc": { "alt": "उपुनिया" }, "unr": { "native": "उपुनिया" } }
+          "id": "num-4",
+          "kind": "word",
+          "hi": "चार",
+          "en": "Four",
+          "digit": 4,
+          "tr": {
+            "sat": {
+              "native": "ᱯᱚᱱ",
+              "alt": "pon"
+            },
+            "hoc": {
+              "alt": "उपुनिया"
+            },
+            "unr": {
+              "native": "उपुनिया"
+            }
+          }
         },
         {
-          "id": "num-5", "kind": "word", "hi": "पाँच", "en": "Five", "digit": 5,
-          "tr": { "sat": { "native": "ᱢᱚᱬᱮ", "alt": "mɔ̃ṛɛ̃" }, "hoc": { "alt": "मोया" }, "unr": { "native": "मोड़ेया" } }
+          "id": "num-5",
+          "kind": "word",
+          "hi": "पाँच",
+          "en": "Five",
+          "digit": 5,
+          "tr": {
+            "sat": {
+              "native": "ᱢᱚᱬᱮ",
+              "alt": "mɔ̃ṛɛ̃"
+            },
+            "hoc": {
+              "alt": "मोया"
+            },
+            "unr": {
+              "native": "मोड़ेया"
+            }
+          }
         },
         {
-          "id": "num-6", "kind": "word", "hi": "छह", "en": "Six", "digit": 6,
-          "tr": { "sat": { "native": "ᱛᱩᱨᱩᱭ", "alt": "turui" }, "hoc": { "alt": "तुरुइया" }, "unr": { "native": "तुरिया" } }
+          "id": "num-6",
+          "kind": "word",
+          "hi": "छह",
+          "en": "Six",
+          "digit": 6,
+          "tr": {
+            "sat": {
+              "native": "ᱛᱩᱨᱩᱭ",
+              "alt": "turui"
+            },
+            "hoc": {
+              "alt": "तुरुइया"
+            },
+            "unr": {
+              "native": "तुरिया"
+            }
+          }
         },
         {
-          "id": "num-7", "kind": "word", "hi": "सात", "en": "Seven", "digit": 7,
-          "tr": { "sat": { "native": "ᱮᱭᱟᱭ", "alt": "eae" }, "hoc": { "alt": "अइया" }, "unr": { "native": "एया" } }
+          "id": "num-7",
+          "kind": "word",
+          "hi": "सात",
+          "en": "Seven",
+          "digit": 7,
+          "tr": {
+            "sat": {
+              "native": "ᱮᱭᱟᱭ",
+              "alt": "eae"
+            },
+            "hoc": {
+              "alt": "अइया"
+            },
+            "unr": {
+              "native": "एया"
+            }
+          }
         },
         {
-          "id": "num-8", "kind": "word", "hi": "आठ", "en": "Eight", "digit": 8,
-          "tr": { "sat": { "native": "ᱤᱨᱟᱹᱞ", "alt": "irăl" }, "hoc": { "alt": "इरिलिया" }, "unr": { "native": "इरलिया" } }
+          "id": "num-8",
+          "kind": "word",
+          "hi": "आठ",
+          "en": "Eight",
+          "digit": 8,
+          "tr": {
+            "sat": {
+              "native": "ᱤᱨᱟᱹᱞ",
+              "alt": "irăl"
+            },
+            "hoc": {
+              "alt": "इरिलिया"
+            },
+            "unr": {
+              "native": "इरलिया"
+            }
+          }
         },
         {
-          "id": "num-9", "kind": "word", "hi": "नौ", "en": "Nine", "digit": 9,
-          "tr": { "sat": { "native": "ᱟᱨᱮ", "alt": "are" }, "hoc": { "alt": "अरेया" }, "unr": { "native": "अरेया" } }
+          "id": "num-9",
+          "kind": "word",
+          "hi": "नौ",
+          "en": "Nine",
+          "digit": 9,
+          "tr": {
+            "sat": {
+              "native": "ᱟᱨᱮ",
+              "alt": "are"
+            },
+            "hoc": {
+              "alt": "अरेया"
+            },
+            "unr": {
+              "native": "अरेया"
+            }
+          }
         },
         {
-          "id": "num-10", "kind": "word", "hi": "दस", "en": "Ten", "digit": 10,
-          "tr": { "sat": { "native": "ᱜᱮᱞ", "alt": "gel" }, "hoc": { "alt": "गेलेया" }, "unr": { "native": "गेलेया" } }
+          "id": "num-10",
+          "kind": "word",
+          "hi": "दस",
+          "en": "Ten",
+          "digit": 10,
+          "tr": {
+            "sat": {
+              "native": "ᱜᱮᱞ",
+              "alt": "gel"
+            },
+            "hoc": {
+              "alt": "गेलेया"
+            },
+            "unr": {
+              "native": "गेलेया"
+            }
+          }
         },
-        { "id": "num-s1", "kind": "sentence", "hi": "चलो गिनती करें।", "en": "Let us count." },
-        { "id": "num-s2", "kind": "sentence", "hi": "कितने आम हैं?", "en": "How many mangoes are there?" },
-        { "id": "num-s3", "kind": "sentence", "hi": "अपनी उँगलियाँ गिनो।", "en": "Count your fingers." },
-        { "id": "num-s4", "kind": "sentence", "hi": "मेरे साथ बोलो।", "en": "Say it with me." }
+        {
+          "id": "num-s1",
+          "kind": "sentence",
+          "hi": "चलो गिनती करें।",
+          "en": "Let us count."
+        },
+        {
+          "id": "num-s2",
+          "kind": "sentence",
+          "hi": "कितने आम हैं?",
+          "en": "How many mangoes are there?"
+        },
+        {
+          "id": "num-s3",
+          "kind": "sentence",
+          "hi": "अपनी उँगलियाँ गिनो।",
+          "en": "Count your fingers."
+        },
+        {
+          "id": "num-s4",
+          "kind": "sentence",
+          "hi": "मेरे साथ बोलो।",
+          "en": "Say it with me."
+        }
+      ]
+    },
+    {
+      "id": "l-body",
+      "grade": 1,
+      "subject": "paryavaran",
+      "outcome": "evs",
+      "emoji": "🧒",
+      "titleHi": "शरीर के अंग",
+      "titleEn": "Parts of the Body",
+      "items": [
+        {
+          "id": "body-eye",
+          "kind": "word",
+          "hi": "आँख",
+          "en": "Eye",
+          "emoji": "👁️"
+        },
+        {
+          "id": "body-ear",
+          "kind": "word",
+          "hi": "कान",
+          "en": "Ear",
+          "emoji": "👂"
+        },
+        {
+          "id": "body-nose",
+          "kind": "word",
+          "hi": "नाक",
+          "en": "Nose",
+          "emoji": "👃"
+        },
+        {
+          "id": "body-mouth",
+          "kind": "word",
+          "hi": "मुँह",
+          "en": "Mouth",
+          "emoji": "👄"
+        },
+        {
+          "id": "body-hand",
+          "kind": "word",
+          "hi": "हाथ",
+          "en": "Hand",
+          "emoji": "✋"
+        },
+        {
+          "id": "body-foot",
+          "kind": "word",
+          "hi": "पैर",
+          "en": "Foot",
+          "emoji": "🦶"
+        },
+        {
+          "id": "body-tooth",
+          "kind": "word",
+          "hi": "दाँत",
+          "en": "Tooth",
+          "emoji": "🦷"
+        },
+        {
+          "id": "body-s1",
+          "kind": "sentence",
+          "hi": "यह मेरी आँख है।",
+          "en": "This is my eye."
+        },
+        {
+          "id": "body-s2",
+          "kind": "sentence",
+          "hi": "हम आँखों से देखते हैं।",
+          "en": "We see with our eyes."
+        },
+        {
+          "id": "body-s3",
+          "kind": "sentence",
+          "hi": "हम कानों से सुनते हैं।",
+          "en": "We hear with our ears."
+        },
+        {
+          "id": "body-s4",
+          "kind": "sentence",
+          "hi": "अपने हाथ ऊपर करो।",
+          "en": "Raise your hands."
+        },
+        {
+          "id": "body-s5",
+          "kind": "sentence",
+          "hi": "अपनी नाक छुओ।",
+          "en": "Touch your nose."
+        }
+      ]
+    },
+    {
+      "id": "l-nature",
+      "grade": 2,
+      "subject": "paryavaran",
+      "outcome": "evs",
+      "emoji": "🐄",
+      "titleHi": "फल और जानवर",
+      "titleEn": "Fruits and Animals",
+      "items": [
+        {
+          "id": "nat-mango",
+          "kind": "word",
+          "hi": "आम",
+          "en": "Mango",
+          "emoji": "🥭"
+        },
+        {
+          "id": "nat-banana",
+          "kind": "word",
+          "hi": "केला",
+          "en": "Banana",
+          "emoji": "🍌"
+        },
+        {
+          "id": "nat-apple",
+          "kind": "word",
+          "hi": "सेब",
+          "en": "Apple",
+          "emoji": "🍎"
+        },
+        {
+          "id": "nat-cow",
+          "kind": "word",
+          "hi": "गाय",
+          "en": "Cow",
+          "emoji": "🐄"
+        },
+        {
+          "id": "nat-goat",
+          "kind": "word",
+          "hi": "बकरी",
+          "en": "Goat",
+          "emoji": "🐐"
+        },
+        {
+          "id": "nat-dog",
+          "kind": "word",
+          "hi": "कुत्ता",
+          "en": "Dog",
+          "emoji": "🐕"
+        },
+        {
+          "id": "nat-hen",
+          "kind": "word",
+          "hi": "मुर्गी",
+          "en": "Hen",
+          "emoji": "🐔"
+        },
+        {
+          "id": "nat-fish",
+          "kind": "word",
+          "hi": "मछली",
+          "en": "Fish",
+          "emoji": "🐟"
+        },
+        {
+          "id": "nat-s1",
+          "kind": "sentence",
+          "hi": "यह आम है।",
+          "en": "This is a mango."
+        },
+        {
+          "id": "nat-s2",
+          "kind": "sentence",
+          "hi": "आम मीठा होता है।",
+          "en": "Mango is sweet."
+        },
+        {
+          "id": "nat-s3",
+          "kind": "sentence",
+          "hi": "गाय दूध देती है।",
+          "en": "The cow gives milk."
+        },
+        {
+          "id": "nat-s4",
+          "kind": "sentence",
+          "hi": "मछली पानी में रहती है।",
+          "en": "Fish live in water."
+        },
+        {
+          "id": "nat-s5",
+          "kind": "sentence",
+          "hi": "आपको कौन सा फल पसंद है?",
+          "en": "Which fruit do you like?"
+        }
       ]
     },
     {
@@ -172,18 +628,85 @@
       "titleHi": "रंग",
       "titleEn": "Colours",
       "items": [
-        { "id": "col-red", "kind": "word", "hi": "लाल", "en": "Red", "emoji": "🔴" },
-        { "id": "col-blue", "kind": "word", "hi": "नीला", "en": "Blue", "emoji": "🔵" },
-        { "id": "col-yellow", "kind": "word", "hi": "पीला", "en": "Yellow", "emoji": "🟡" },
-        { "id": "col-green", "kind": "word", "hi": "हरा", "en": "Green", "emoji": "🟢" },
-        { "id": "col-black", "kind": "word", "hi": "काला", "en": "Black", "emoji": "⚫" },
-        { "id": "col-white", "kind": "word", "hi": "सफ़ेद", "en": "White", "emoji": "⚪" },
-        { "id": "col-orange", "kind": "word", "hi": "नारंगी", "en": "Orange", "emoji": "🟠" },
-        { "id": "col-s1", "kind": "sentence", "hi": "यह कौन सा रंग है?", "en": "Which colour is this?" },
-        { "id": "col-s2", "kind": "sentence", "hi": "यह लाल रंग है।", "en": "This is red." },
-        { "id": "col-s3", "kind": "sentence", "hi": "पत्ता हरा होता है।", "en": "A leaf is green." },
-        { "id": "col-s4", "kind": "sentence", "hi": "आसमान नीला है।", "en": "The sky is blue." },
-        { "id": "col-s5", "kind": "sentence", "hi": "आपका पसंदीदा रंग कौन सा है?", "en": "What is your favourite colour?" }
+        {
+          "id": "col-red",
+          "kind": "word",
+          "hi": "लाल",
+          "en": "Red",
+          "emoji": "🔴"
+        },
+        {
+          "id": "col-blue",
+          "kind": "word",
+          "hi": "नीला",
+          "en": "Blue",
+          "emoji": "🔵"
+        },
+        {
+          "id": "col-yellow",
+          "kind": "word",
+          "hi": "पीला",
+          "en": "Yellow",
+          "emoji": "🟡"
+        },
+        {
+          "id": "col-green",
+          "kind": "word",
+          "hi": "हरा",
+          "en": "Green",
+          "emoji": "🟢"
+        },
+        {
+          "id": "col-black",
+          "kind": "word",
+          "hi": "काला",
+          "en": "Black",
+          "emoji": "⚫"
+        },
+        {
+          "id": "col-white",
+          "kind": "word",
+          "hi": "सफ़ेद",
+          "en": "White",
+          "emoji": "⚪"
+        },
+        {
+          "id": "col-orange",
+          "kind": "word",
+          "hi": "नारंगी",
+          "en": "Orange",
+          "emoji": "🟠"
+        },
+        {
+          "id": "col-s1",
+          "kind": "sentence",
+          "hi": "यह कौन सा रंग है?",
+          "en": "Which colour is this?"
+        },
+        {
+          "id": "col-s2",
+          "kind": "sentence",
+          "hi": "यह लाल रंग है।",
+          "en": "This is red."
+        },
+        {
+          "id": "col-s3",
+          "kind": "sentence",
+          "hi": "पत्ता हरा होता है।",
+          "en": "A leaf is green."
+        },
+        {
+          "id": "col-s4",
+          "kind": "sentence",
+          "hi": "आसमान नीला है।",
+          "en": "The sky is blue."
+        },
+        {
+          "id": "col-s5",
+          "kind": "sentence",
+          "hi": "आपका पसंदीदा रंग कौन सा है?",
+          "en": "What is your favourite colour?"
+        }
       ]
     }
   ]
