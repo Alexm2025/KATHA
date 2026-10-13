@@ -126,6 +126,8 @@ export interface Translation extends ResultMeta {
   alt: string
   /** Set when a fuzzy match was used, so the teacher can see what was matched. */
   matchedHi?: string
+  /** Normalised Hindi that identifies the recorded clip for this translation. */
+  audioKey: string
 }
 
 export interface AudioOutput extends ResultMeta {
@@ -145,6 +147,8 @@ export interface Utterance {
   source: 'speech' | 'tap' | 'typed'
   hi: string
   translation: Translation
+  /** End of speech (or tap) → translation on screen, in ms. */
+  latencyMs: number
   at: number
 }
 

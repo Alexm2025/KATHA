@@ -52,6 +52,7 @@ export class GlossaryTranslator implements TranslationProvider {
       available: false,
       native: '',
       alt: '',
+      audioKey: normHi(text),
     })
     if (from !== 'hi' || !isTribal(to)) return miss()
 
@@ -74,6 +75,7 @@ export class GlossaryTranslator implements TranslationProvider {
       native: join('native'),
       alt: join('alt') || (join('native') ? '' : parts.map((p) => p.entry.alt || p.entry.native).join(' ')),
       matchedHi: fuzzy ? parts.map((p) => p.entry.hi).join(' ') : undefined,
+      audioKey: parts.length === 1 ? parts[0].entry.hiNorm : normHi(text),
     }
   }
 
@@ -133,6 +135,7 @@ export class ServerTranslator implements TranslationProvider {
       available: !!body.available,
       native: body.native ?? '',
       alt: body.alt ?? '',
+      audioKey: normHi(text),
     }
   }
 }
